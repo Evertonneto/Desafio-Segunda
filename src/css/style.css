@@ -29,11 +29,19 @@ body {
 .container img {
     width: 22.5rem;
     margin-bottom: 2.7rem;
+
+    animation-name: elevation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
 
 .container .input-wrap {
     display: flex;
     flex-direction: column;
+
+    animation-name: down;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 
 }
 
@@ -91,8 +99,32 @@ body {
     color: var(--text-color);
 
     transition: 0.4s ease-out;
+
+    animation-name: down;
+    animation-duration: 2s;
+    animation-timing-function: ease;
 }
 
 .container button:hover {
     box-shadow: rgb(43, 77, 38) 0px 20px 30px -10px;
+}
+
+@keyframes elevation {
+    0% {
+        transform: translateY(-3rem);
+    }
+
+    100% {
+        transform: translate(0rem);
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(3rem);
+    }
+
+    100% {
+        transform: translate(0rem);
+    }
 }
